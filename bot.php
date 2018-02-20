@@ -44,4 +44,8 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+$a=$_POST=['a'];
+$b=$_POST=['b'];
+$c=$a+$b
+echo"$c";
 echo "OK";
