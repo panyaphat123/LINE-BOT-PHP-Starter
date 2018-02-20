@@ -6,7 +6,7 @@ Q7Vn7Mx5VFZ3bWoMuQiaEA+D3HfLA/PK3SDI+n+sNsX38J
 
 Bidr2hHgXn7jkXBzfwkF0iEc7D9UCUg7qQdB04t89/1O/w1cDnyilFU= ';
 
-$url = 'https://access.line.me/oauth2/v2.1/authorize';
+$url = 'https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
