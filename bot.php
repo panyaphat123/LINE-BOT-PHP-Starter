@@ -18,8 +18,40 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
-				'text' => $text
+				$In1=$_POST ['In1'] ;
+ 				$In2=$_POST ['In2'] ;
+  				$sign = $_POST['gender'];
+ 
+   if ($sign == "+"){
+      $sum=$In1+$In2;
+      print $In1." + ".$In2." = ".$sum;
+   }
+   elseif ($sign == "-"){  
+      $sum=$In1-$In2;         
+      print $In1." - ".$In2." = ".$sum;
+   }
+   elseif ($sign == "*"){  
+      $sum=$In1*$In2;         
+      print $In1." x ".$In2." = ".$sum;
+   }
+   elseif ($sign == "/"){
+       if($In2==0){  
+        print "ผิดพลาดตัวหาร = 0!";
+      }
+      else{
+        $sum=$In1/$In2;         
+        print $In1." / ".$In2." = ".$sum;
+     }   
+   }
+   elseif ( $_POST['gender']=='!'){
+      $sum = $_POST ['In1'];
+      print $_POST ['In1']."! =".$_POST ['In1'];
+   for ($i=($_POST ['In1'] -1); $i>=1; $i--) {
+    $sum *= $i;
+    print "x".$i;
+    }
+    print "=".$sum;
+    }   
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
